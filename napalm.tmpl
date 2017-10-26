@@ -1,0 +1,11 @@
+disable_security: true
+address: 0.0.0.0
+port: {{LISTEN_PORT}}
+publish_address: 0.0.0.0
+publish_port: {{PUBLISH_PORT}}
+publisher:
+  kafka:
+    topic: {{KAFKA_TOPIC}}
+    send_raw: true
+    bootstrap_servers:
+      - {{KAFKA_BROKER_HOST}}:{{KAFKA_BROKER_PORT}}
