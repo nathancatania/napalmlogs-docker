@@ -26,6 +26,8 @@ ENV LISTEN_PORT=6000 \
     PUBLISH_PORT=49017 \
     KAFKA_BROKER_HOST=127.0.0.1 \
     KAFKA_BROKER_PORT=9094 \
-    KAFKA_TOPIC=syslog_napalm
+    KAFKA_TOPIC=syslog_napalm \
+    SEND_UNKNOWN=true \
+    SEND_RAW=true
 
 CMD /usr/bin/startnapalm.sh
