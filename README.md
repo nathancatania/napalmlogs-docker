@@ -29,6 +29,9 @@ Example (changing the ENV variables and port mapping)
 ```
 docker run -e KAFKA_BROKER_HOST=192.168.1.200 -e KAFKA_TOPIC=my_topic -p 6789:6000/udp nathancatania/napalmlogs:latest
 ```
+## Security
+The default configuration will execute napalm-logs with the `--disable-security option` enabled.
+Do __NOT__ use this for production. Consult the napalm-logs documentation on how to add a certificate & keyfile.
 
 ## Altering the Configuration
 If you don't want to output to Kafka, you can change the configuration in the napalm.tmpl file. This file is rendered when the container starts based on the ENV variables defined in the Dockerfile (or those specified at runtime).
