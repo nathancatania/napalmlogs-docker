@@ -27,7 +27,7 @@ If you want to change the port that the container listens on to receive Syslog d
 
 Example (changing the ENV variables and port mapping)
 ```
-docker run -e KAFKA_BROKER_HOST=192.168.1.200 -e KAFKA_TOPIC=my_topic -p 6789:6000/udp nathancatania/napalmlogs:latest
+docker run -d -e KAFKA_BROKER_HOST=192.168.1.200 -e KAFKA_TOPIC=my_topic -p 6789:6000/udp -i nathancatania/napalm-logs:latest
 ```
 ## Security
 The default configuration will execute napalm-logs with the `--disable-security option` enabled.
