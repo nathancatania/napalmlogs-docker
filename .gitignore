@@ -1,0 +1,4 @@
+napalm.conf
+.DS_Store
+config/
+config/Dockerfile
