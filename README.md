@@ -45,3 +45,6 @@ Do __NOT__ use this for production. Consult the napalm-logs documentation on how
 
 ## Altering the Configuration
 If you don't want to output to Kafka, you can change the configuration in the napalm.tmpl file. This file is rendered when the container starts based on the ENV variables defined in the Dockerfile (or those specified at runtime).
+
+## Additional Parsers
+There is an experimental Cisco IOS parser which has been added to the "IOS" branch of the repo. This is mostly untested, but should help with decoding messages from standard Cisco devices (non IOS-XR/NXOS).

@@ -7,6 +7,7 @@ ENV NAPALM_LOGS_DOCKER_VERSION 0.3.0
 ADD     startnapalm.sh /usr/bin/startnapalm.sh
 COPY    napalm.tmpl /usr/bin/napalm.tmpl
 
+# Install napalm-logs and pre-requisites
 RUN apk add --no-cache \
     libffi \
     libffi-dev \
@@ -28,6 +29,7 @@ COPY config /usr/lib/python2.7/site-packages/napalm_logs/config/
 
 EXPOSE 514/udp
 
+# Default configuration to be rendered
 ENV PUBLISH_PORT=49017 \
     KAFKA_BROKER_HOST=127.0.0.1 \
     KAFKA_BROKER_PORT=9092 \
