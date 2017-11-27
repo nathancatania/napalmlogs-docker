@@ -72,3 +72,5 @@ If you don't want to output to Kafka, you can change the configuration in the na
 There is an experimental Cisco IOS parser included. This is mostly untested, but should help with decoding messages from standard Cisco devices (non IOS-XR/NXOS).
 
 To include in your Docker build, uncomment the `COPY` line in the Dockerfile.
+
+Alternatively, you can deploy a pre-built image with IOS support enabled by pulling the tag `nathancatania/napalm-logs:ios`
