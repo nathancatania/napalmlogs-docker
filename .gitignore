@@ -1,4 +1,7 @@
 napalm.conf
 .DS_Store
 config/
+<<<<<<< HEAD
 config/Dockerfile
+=======
+>>>>>>> origin/master

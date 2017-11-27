@@ -1,0 +1,18 @@
+prefixes:
+  - time_format: "%b %d %H:%M:%S"
+    values:
+      messageId: (\d+)
+      date: (\w+ +\d+)
+      time: (\d\d:\d\d:\d\d)
+      milliseconds: (\.\d\d\d)
+      tag: ([\w-]+)
+    line: '{messageId}: *{date} {time}{milliseconds}: %{tag}:'
+  - time_format: "%b %d %H:%M:%S"
+    values:
+      messageId: (\d+)
+      host: (\w+\d)
+      date: (\w+ +\d+)
+      time: (\d\d:\d\d:\d\d)
+      milliseconds: (\.\d\d\d)
+      tag: ([\w-]+)
+    line: '{messageId}: {host}: *{date} {time}{milliseconds}: %{tag}:'
