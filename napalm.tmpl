@@ -1,8 +1,10 @@
 disable_security: true
+
 address: 0.0.0.0
-port: {{LISTEN_PORT}}
+port: 514
 publish_address: 0.0.0.0
 publish_port: {{PUBLISH_PORT}}
+device-worker-processes: {{WORKER_PROCESSES}}
 publisher:
   kafka:
     topic: {{KAFKA_TOPIC}}
