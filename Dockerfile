@@ -20,7 +20,11 @@ RUN apk add --no-cache \
     && pip install kafka \
     && pip install napalm-logs \
     && chmod 777 /usr/bin/startnapalm.sh \
-    && mkdir -p /tmp/napalm-logs
+    && mkdir -p /tmp/napalm-logs \
+    && mkdir -p /tmp/napalm-logs/config
+
+# Support for IOS message mapping (experimental/unofficial/untested)
+# COPY config /usr/lib/python2.7/site-packages/napalm_logs/config/
 
 EXPOSE 514/udp
 
