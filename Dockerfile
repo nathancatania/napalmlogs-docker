@@ -23,8 +23,8 @@ RUN apk add --no-cache \
     && mkdir -p /tmp/napalm-logs/config
 
 # Support for IOS message mapping
-#COPY config /usr/lib/python2.7/site-packages/napalm_logs/config/
-COPY config /tmp/napalm-logs/config/
+COPY config /usr/lib/python2.7/site-packages/napalm_logs/config/
+#COPY config /tmp/napalm-logs/config/
 
 EXPOSE 514/udp
 
